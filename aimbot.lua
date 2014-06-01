@@ -1,5 +1,5 @@
 -- Slightly modified wiki aimbot by Trollaux
-hook.Add("CreateMove",tostring(math.random(562819,1461946186481461)), function aimbot()
+hook.Add("CreateMove",tostring(math.random(562819,1461946186481461)), function()
 	local ply = LocalPlayer()
 	local trace = util.GetPlayerTrace( ply )
 	local traceRes = util.TraceLine( trace )
