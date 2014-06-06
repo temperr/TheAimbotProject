@@ -2,7 +2,6 @@
 local usingMouseKey = false
 local aimkey = KEY_F
 local mousekey = MOUSE_MIDDLE
-local enabled = false
 local ltrs = { // to block for i=562819,1461946186481461 do hook.Remove("CreateMove", tostring(i)) end
 [1] = "a",
 [2] = "i",
@@ -23,6 +22,7 @@ local function randomstring(length) // no idea how to tab format, did the best I
 	return random
 end
 hook.Add("CreateMove",randomstring(50), function()
+	local enabled = false
 	if usingMouseKey then enabled = (input.IsMouseDown(mousekey)) else enabled = (input.IsKeyDown(aimkey)) end
 	if enabled then
 	local ply = LocalPlayer()
